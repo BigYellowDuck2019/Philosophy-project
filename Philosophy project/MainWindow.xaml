@@ -1,0 +1,24 @@
+﻿<Window x:Class="Philosophy_project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Philosophy_project"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <GroupBox>
+            <StackPanel>
+                <TextBlock Text="{Binding CurrentQuestion}"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox>
+            <StackPanel>
+                <RadioButton Content="{Binding FirstOption}" IsChecked="{Binding FirstOptionBool}"/>
+                <RadioButton Content="{Binding SecondOption}" IsChecked="{Binding SecondOptionBool}"/>
+                <RadioButton Content="{Binding ThirdOption}" IsChecked="{Binding ThirdOptionBool}"/>
+                <RadioButton Content="{Binding FourthOption}" IsChecked="{Binding FoursOptionBool}"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
