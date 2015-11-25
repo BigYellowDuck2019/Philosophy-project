@@ -9,7 +9,8 @@ namespace Philosophy_project
 		{
 			Problem problem = new Problem(reader.ReadLine());
 			string _string = reader.ReadLine();
-			while (_string != "\n")
+			
+			while (_string != "")
 			{
 				problem.OptionsList.Add(_string);
 				_string = reader.ReadLine();

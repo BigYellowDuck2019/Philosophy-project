@@ -9,6 +9,7 @@ namespace Philosophy_project.Model
 		public Problem(string question)
 		{
 			Question = question;
+			OptionsList = new List<string>();
 		}
 
 		private byte _selectedOption;
@@ -16,7 +17,7 @@ namespace Philosophy_project.Model
 
 		public List<string> OptionsList { get; set; }
 
-		public byte Number { get; set; }
+		//public byte Number { get; set; }
 
 		public byte SelectedOption
 		{

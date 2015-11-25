@@ -5,14 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Philosophy_project"
         mc:Ignorable="d"
+        
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <GroupBox>
-            <StackPanel>
-                <TextBlock Text="{Binding CurrentQuestion}"/>
-            </StackPanel>
-        </GroupBox>
-        <GroupBox>
+        <StackPanel Orientation ="Vertical">
+            <GroupBox>
+                <StackPanel>
+                    <TextBlock Text="{Binding CurrentQuestionHeader}"/>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox>
             <StackPanel>
                 <RadioButton Content="{Binding FirstOption}" IsChecked="{Binding FirstOptionBool}"/>
                 <RadioButton Content="{Binding SecondOption}" IsChecked="{Binding SecondOptionBool}"/>
@@ -20,5 +22,7 @@
                 <RadioButton Content="{Binding FourthOption}" IsChecked="{Binding FoursOptionBool}"/>
             </StackPanel>
         </GroupBox>
+            <Button Content="Далее" IsEnabled="{Binding IsAnswerSelected}" Command="{Binding Command}"/>
+        </StackPanel>
     </Grid>
 </Window>
